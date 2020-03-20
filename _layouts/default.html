@@ -1,51 +1,219 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="/assets/images/corona.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    {% include meta.html %}
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <title>{{ page.title }}</title>
   </head>
-
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+    <div class="container">
+      <h1>{{ page.header }}</h1>
+      <p>{{ page.desc }}</p>
+      <form id="myform">
+	<fieldset class="form-group">
+	  <div class="row">
+	    <legend class="col-form-label col-sm-10 pt-0">{{ page.q1 }}</legend>
+	    <div class="col-sm-10">
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="aire" id="1" value="1">
+		<label class="form-check-label" for="1">
+		  {{ page.yes }}
+		</label>
+              </div>
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="aire" id="gridRadios2" value="0">
+		<label class="form-check-label" for="gridRadios2">
+		  {{ page.no }}
+		</label>
+              </div>
+	    </div>
+	  </div>
+	</fieldset>
+	<fieldset class="form-group">
+	  <div class="row">
+	    <legend class="col-form-label col-sm-10 pt-0">{{ page.q2 }}</legend>
+	    <div class="col-sm-10">
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="gastro" id="1" value="1" >
+		<label class="form-check-label" for="1">
+		  {{ page.yes }}
+		</label>
+              </div>
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="gastro" id="gridRadios2" value="0">
+		<label class="form-check-label" for="gridRadios2">
+		  {{ page.no }}
+		</label>
+              </div>
+	    </div>
+	  </div>
+	</fieldset>
+	<fieldset class="form-group">
+	  <div class="row">
+	    <legend class="col-form-label col-sm-10 pt-0">{{ page.q3 }}</legend>
+	    <div class="col-sm-10">
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="mocos" id="1" value="1" >
+		<label class="form-check-label" for="1">
+		  {{ page.yes }}
+		</label>
+              </div>
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="mocos" id="gridRadios2" value="0">
+		<label class="form-check-label" for="gridRadios2">
+		  {{ page.no }}
+		</label>
+              </div>
+	    </div>
+	  </div>
+	</fieldset>
+		<fieldset class="form-group">
+	  <div class="row">
+	    <legend class="col-form-label col-sm-10 pt-0">{{ page.q4 }}</legend>
+	    <div class="col-sm-10">
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="fiebre" id="1" value="1" >
+		<label class="form-check-label" for="1">
+		  {{ page.yes }}
+		</label>
+              </div>
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="fiebre" id="gridRadios2" value="0">
+		<label class="form-check-label" for="gridRadios2">
+		  {{ page.no }}
+		</label>
+              </div>
+	    </div>
+	  </div>
+	</fieldset>
+	<fieldset class="form-group">
+	  <div class="row">
+	    <legend class="col-form-label col-sm-10 pt-0">{{ page.q5 }}</legend>
+	    <div class="col-sm-10">
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="contacto" id="1" value="1" >
+		<label class="form-check-label" for="1">
+		  {{ page.yes }}
+		</label>
+              </div>
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="contacto" id="gridRadios2" value="0">
+		<label class="form-check-label" for="gridRadios2">
+		  {{ page.no }}
+		</label>
+              </div>
+	    </div>
+	  </div>
+	</fieldset>
+	<fieldset class="form-group">
+	  <div class="row">
+	    <legend class="col-form-label col-sm-10 pt-0">{{ page.q6 }}</legend>
+	    <div class="col-sm-10">
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="musculos" id="1" value="1" >
+		<label class="form-check-label" for="1">
+		  {{ page.yes }}
+		</label>
+              </div>
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="musculos" id="gridRadios2" value="0">
+		<label class="form-check-label" for="gridRadios2">
+		  {{ page.no }}
+		</label>
+              </div>
+	    </div>
+	  </div>
+	</fieldset>
+	<fieldset class="form-group">
+	  <div class="row">
+	    <legend class="col-form-label col-sm-10 pt-0">{{ page.q7 }}</legend>
+	    <div class="col-sm-10">
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="tos" id="1" value="1">
+		<label class="form-check-label" for="1">
+		  {{ page.yes }}
+		</label>
+              </div>
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="tos" id="gridRadios2" value="0">
+		<label class="form-check-label" for="gridRadios2">
+		  {{ page.no }}
+		</label>
+              </div>
+	    </div>
+	  </div>
+	</fieldset>
+	<fieldset class="form-group">
+	  <div class="row">
+	    <legend class="col-form-label col-sm-10 pt-0">{{ page.q8 }}</legend>
+	    <div class="col-sm-10">
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="tiempo" id="1" value="1" >
+		<label class="form-check-label" for="1">
+		  {{ page.yes2 }}
+		</label>
+              </div>
+              <div class="form-check">
+		<input class="form-check-input" type="radio" name="tiempo" id="gridRadios2" value="0">
+		<label class="form-check-label" for="gridRadios2">
+		  {{ page.no2 }}
+		</label>
+              </div>
+	    </div>
+	  </div>
+	</fieldset>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
+	<!-- <button type="button" class="btn btn-primary" id="calculador">Submit</button> -->
+	<button type="button" class="btn btn-primary" onclick="calcula()">Submit</button>
+      </form>
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+	<div class="modal-dialog">
+	  
+	  <!-- Modal content-->
+	  <div class="modal-content">
+            <div class="modal-header">
+	      <h4 class="modal-title">{{ page.results }}</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>Miau.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ page.close }}</button>
+            </div>
+	  </div>
+	</div>
       </div>
+  
+      
     </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
-    {% include analytics.html %}
+    <script>
+      function calcula(form) {
+	  var res = ($('input[name=aire]:checked', '#myform').val()*60) + ($('input[name=tiempo]:checked', '#myform').val()*(-15)) + ($('input[name=fiebre]:checked', '#myform').val()*15) + ($('input[name=tos]:checked', '#myform').val()*15) + ($('input[name=contacto]:checked', '#myform').val()*29);
+	  // alert (res);
+	  if (res >= 30)
+	  {
+	      $('.modal-body')[0].innerHTML = '<p>{{ page.positive }}</p>';
+	      $("#myModal").modal();
+	  }
+	  else
+	  {
+	      $('.modal-body>p')[0].innerText = '{{ page.negative }}';
+	      $("#myModal").modal();
+	  }
+      }
+    </script>    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
